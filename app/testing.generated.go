@@ -5,8 +5,8 @@
 package app
 
 import (
+	context "context"
 	gomock "github.com/golang/mock/gomock"
-	app "github.com/powerman/bug-gomock/app"
 	reflect "reflect"
 )
 
@@ -34,13 +34,13 @@ func (m *MockApp) EXPECT() *MockAppMockRecorder {
 }
 
 // Noop mocks base method
-func (m *MockApp) Noop(ctx app.Ctx) {
+func (m *MockApp) Noop(arg0 context.Context) {
 	m.ctrl.T.Helper()
-	m.ctrl.Call(m, "Noop", ctx)
+	m.ctrl.Call(m, "Noop", arg0)
 }
 
 // Noop indicates an expected call of Noop
-func (mr *MockAppMockRecorder) Noop(ctx interface{}) *gomock.Call {
+func (mr *MockAppMockRecorder) Noop(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Noop", reflect.TypeOf((*MockApp)(nil).Noop), ctx)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Noop", reflect.TypeOf((*MockApp)(nil).Noop), arg0)
 }
