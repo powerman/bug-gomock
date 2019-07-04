@@ -5,8 +5,8 @@
 package app
 
 import (
-	context "context"
 	gomock "github.com/golang/mock/gomock"
+	app "github.com/powerman/bug-gomock/app"
 	reflect "reflect"
 )
 
@@ -34,7 +34,7 @@ func (m *MockApp) EXPECT() *MockAppMockRecorder {
 }
 
 // Noop mocks base method
-func (m *MockApp) Noop(ctx context.Context) {
+func (m *MockApp) Noop(ctx app.Ctx) {
 	m.ctrl.T.Helper()
 	m.ctrl.Call(m, "Noop", ctx)
 }

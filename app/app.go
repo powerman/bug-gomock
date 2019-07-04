@@ -11,6 +11,6 @@ type Ctx = context.Context
 
 // App provides application features service.
 type App interface {
-	Noop(ctx context.Context) // works
-	// Noop(ctx Ctx)             // doesn't work
+	// Noop(ctx context.Context) // works
+	Noop(ctx Ctx) // doesn't work
 }
